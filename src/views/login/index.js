@@ -1,6 +1,6 @@
 import React from 'react';
 import './login.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button, Form, Input, Divider } from 'antd';
 
 // 校验规则
@@ -20,12 +20,13 @@ const loginRules = {
 };
 
 export default function Login() {
+  const router = useNavigate();
   /**
    * 登陆方法
    * @returns object 账号信息
    */
   const onFinish = (values) => {
-    console.log('Success:', values);
+    router('/');
   };
 
   return (
