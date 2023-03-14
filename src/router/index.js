@@ -1,9 +1,9 @@
 import { Navigate } from 'react-router-dom';
 
-import Epic from '../views/epic';
-import Kanban from '../views/kanban';
-import Project from '../views/project';
-import Login from '../views/login';
+import Epic from '@/views/epic';
+import Kanban from '@/views/kanban';
+import Project from '@/views/project';
+import Login from '@/views/login';
 
 /**
  * 基础路由配置
