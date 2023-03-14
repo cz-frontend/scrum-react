@@ -7,3 +7,24 @@ body {
   -webkit-user-drag: none;
   background-color: #f5f5f5;
 }
+
+.app-layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .header-view {
+    height: 60px;
+    background-color: orange;
+  }
+  .container-view {
+    flex: 1;
+    display: flex;
+    .sidebar {
+      width: 160px;
+      background-color: #fff;
+    }
+    .body {
+      padding: 20px;
+    }
+  }
+}
