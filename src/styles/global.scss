@@ -31,3 +31,14 @@ body {
     }
   }
 }
+
+// 页面样式
+.title-bar {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .module-name {
+    font-size: 36px;
+  }
+}

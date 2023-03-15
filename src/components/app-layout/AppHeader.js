@@ -4,7 +4,6 @@ import AppLogo from './AppLogo';
 import { Link } from 'react-router-dom';
 
 export default function AppHeader() {
-  console.log(1);
   return (
     <div id="header">
       <div className="left">

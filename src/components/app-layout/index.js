@@ -5,7 +5,6 @@ import { Outlet, useLocation } from 'react-router-dom';
 
 export default function AppLayout() {
   const route = useLocation();
-  console.log(route);
   return (
     <div className="app-layout">
       <div className="header-view">
