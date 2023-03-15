@@ -1,18 +1,22 @@
 import React from 'react';
 import AppHeader from './AppHeader';
 import AppSidebar from './AppSidebar';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 
 export default function AppLayout() {
+  const route = useLocation();
+  console.log(route);
   return (
     <div className="app-layout">
       <div className="header-view">
         <AppHeader />
       </div>
       <div className="container-view">
-        <div className="sidebar">
-          <AppSidebar />
-        </div>
+        {route.pathname === '/project' ? null : (
+          <div className="sidebar">
+            <AppSidebar />
+          </div>
+        )}
         <div className="body">
           <Outlet />
         </div>
