@@ -8,13 +8,14 @@ body {
   background-color: #f5f5f5;
 }
 
+// 骨架
 .app-layout {
   height: 100vh;
   display: flex;
   flex-direction: column;
   .header-view {
     height: 60px;
-    background-color: orange;
+    background-color: #fff;
   }
   .container-view {
     flex: 1;
@@ -24,7 +25,9 @@ body {
       background-color: #fff;
     }
     .body {
+      width: 100%;
       padding: 20px;
+      background-color: transparent;
     }
   }
 }
