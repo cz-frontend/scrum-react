@@ -26,7 +26,7 @@ body {
     }
     .body {
       width: 100%;
-      padding: 20px;
+      padding: 20px 40px;
       background-color: transparent;
     }
   }
@@ -38,7 +38,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 10px;
   .module-name {
     font-size: 36px;
   }
+}
+
+.search-control-block {
+  display: block;
+  width: 100%;
 }
