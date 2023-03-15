@@ -1,5 +1,14 @@
-import { Space } from 'antd';
+import { Popconfirm, Space } from 'antd';
 import { Link } from 'react-router-dom';
+
+/**
+ * 删除方法
+ * @param {} record
+ */
+const deleteHandler = (record) => {
+  alert(`删除成功，你删除的是${record.name}`);
+};
+
 /**
  * 项目列表-列配置
  */
@@ -30,8 +39,13 @@ export const projectColumnConf = [
     key: 'action',
     render: (_, record) => (
       <Space size="middle">
-        <Link>编辑</Link>
-        <Link>删除</Link>
+        <Link to={`/operation-project/${record.key}`}>编辑</Link>
+        <Popconfirm
+          title="确定要删除该条数据吗？"
+          onConfirm={() => deleteHandler(record)}
+        >
+          <Link>删除</Link>
+        </Popconfirm>
       </Space>
     ),
   },

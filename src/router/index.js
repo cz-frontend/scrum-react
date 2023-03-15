@@ -1,6 +1,7 @@
 import { Navigate } from 'react-router-dom';
 
 import AppLayout from '@/components/app-layout';
+import OperationProject from '@/views/operation-project';
 import Project from '@/views/project';
 import Kanban from '@/views/kanban';
 import Login from '@/views/login';
@@ -36,11 +37,20 @@ const routes = [
       },
     ],
   },
-
+  // 创建 / 编辑 / 查看项目
+  {
+    path: 'operation-project/:id',
+    element: <OperationProject />,
+  },
   // 登陆
   {
     path: '/login',
     element: <Login />,
+  },
+  // 404页面
+  {
+    path: '*',
+    element: '404',
   },
 ];
 
